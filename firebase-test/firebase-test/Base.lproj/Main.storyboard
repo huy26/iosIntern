@@ -130,8 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-yx-uKM">
-                                <rect key="frame" x="99" y="622" width="216" height="108"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-yx-uKM">
+                                <rect key="frame" x="99" y="622" width="216" height="59"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Get Started">
@@ -139,11 +139,12 @@
                                 </state>
                                 <connections>
                                     <action selector="OnGetStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DLQ-h1-bqr"/>
+                                    <action selector="onSignUp:" destination="ub7-S7-rvy" eventType="touchUpInside" id="VAa-uT-f3k"/>
                                     <segue destination="fR1-yf-3Mv" kind="show" id="MvD-0g-lUV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRO-ng-hxt">
-                                <rect key="frame" x="20" y="175" width="374" height="54"/>
+                                <rect key="frame" x="20" y="219" width="374" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="G1O-MT-tOc"/>
                                 </constraints>
@@ -151,7 +152,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpt-s2-NV6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpt-s2-NV6">
                                 <rect key="frame" x="20" y="237" width="374" height="34"/>
                                 <attributedString key="attributedText">
                                     <fragment content="sign up to continue">
@@ -162,7 +163,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJ4-vc-19y">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJ4-vc-19y">
                                 <rect key="frame" x="20" y="356" width="374" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="FMO-jQ-KSd"/>
@@ -176,7 +177,7 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRv-xi-cI5">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRv-xi-cI5">
                                 <rect key="frame" x="20" y="455" width="374" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Ekb-FJ-6v1"/>
@@ -185,7 +186,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lja-gW-A4y">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lja-gW-A4y">
                                 <rect key="frame" x="20" y="551" width="374" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="3Hq-ae-HeH"/>
@@ -499,7 +500,11 @@
                         </connections>
                     </collectionView>
                     <toolbarItems>
-                        <barButtonItem title="Log out" id="EdU-wL-Hqa"/>
+                        <barButtonItem title="Log out" id="EdU-wL-Hqa">
+                            <connections>
+                                <segue destination="ub7-S7-rvy" kind="show" id="36V-Ub-LDV"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="HhZ-p7-hGV"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -664,6 +669,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Hxj-47-17r"/>
+        <segue reference="MvD-0g-lUV"/>
+        <segue reference="36V-Ub-LDV"/>
     </inferredMetricsTieBreakers>
 </document>

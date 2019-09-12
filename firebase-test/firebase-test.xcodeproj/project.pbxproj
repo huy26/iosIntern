@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,8 +14,10 @@
 		0407C54A232244570039879E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407C548232244570039879E /* LaunchScreen.storyboard */; };
 		0407C55223225EED0039879E /* SignUpViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C55123225EED0039879E /* SignUpViewViewController.swift */; };
 		0407C556232269BF0039879E /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C555232269BF0039879E /* WorkView.swift */; };
+		04573872232A170E00646459 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04573871232A170E00646459 /* GoogleService-Info.plist */; };
 		04E40F6E2323BA1C00895248 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E40F6D2323BA1C00895248 /* TodoView.swift */; };
 		04E40F702323C17F00895248 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E40F6F2323C17F00895248 /* CustomHeader.swift */; };
+		04F7E2A0232A22D0006AF0CC /* FireBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7E29F232A22D0006AF0CC /* FireBase.swift */; };
 		04FB43462328B95800124F66 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB43452328B95800124F66 /* BoardCollectionViewCell.swift */; };
 		04FB43482328B9CA00124F66 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB43472328B9CA00124F66 /* Board.swift */; };
 		04FB434A2328BADE00124F66 /* BoardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB43492328BADE00124F66 /* BoardCollectionViewController.swift */; };
@@ -32,8 +34,10 @@
 		0407C54B232244570039879E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0407C55123225EED0039879E /* SignUpViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewViewController.swift; sourceTree = "<group>"; };
 		0407C555232269BF0039879E /* WorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
+		04573871232A170E00646459 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04E40F6D2323BA1C00895248 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		04E40F6F2323C17F00895248 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
+		04F7E29F232A22D0006AF0CC /* FireBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBase.swift; sourceTree = "<group>"; };
 		04FB43452328B95800124F66 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		04FB43472328B9CA00124F66 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		04FB43492328BADE00124F66 /* BoardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 				0407C548232244570039879E /* LaunchScreen.storyboard */,
 				0407C54B232244570039879E /* Info.plist */,
 				0407C555232269BF0039879E /* WorkView.swift */,
+				04573871232A170E00646459 /* GoogleService-Info.plist */,
 				04FB434B2328BB7200124F66 /* BoardCollection */,
+				04F7E29F232A22D0006AF0CC /* FireBase.swift */,
 			);
 			path = "firebase-test";
 			sourceTree = "<group>";
@@ -128,6 +134,8 @@
 				0407C538232244540039879E /* Sources */,
 				0407C539232244540039879E /* Frameworks */,
 				0407C53A232244540039879E /* Resources */,
+				0010D7DA916AB86A9257E94A /* [CP] Embed Pods Frameworks */,
+				83D26652C3637F9E35215DA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0407C54A232244570039879E /* LaunchScreen.storyboard in Resources */,
+				04573872232A170E00646459 /* GoogleService-Info.plist in Resources */,
 				0407C547232244570039879E /* Assets.xcassets in Resources */,
 				0407C545232244540039879E /* Main.storyboard in Resources */,
 			);
@@ -185,6 +194,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0010D7DA916AB86A9257E94A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-firebase-test/Pods-firebase-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-firebase-test/Pods-firebase-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-firebase-test/Pods-firebase-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83D26652C3637F9E35215DA9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-firebase-test/Pods-firebase-test-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-firebase-test/Pods-firebase-test-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-firebase-test/Pods-firebase-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A09259F5D12BCBCA2B76FA09 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +259,7 @@
 			files = (
 				04FB434A2328BADE00124F66 /* BoardCollectionViewController.swift in Sources */,
 				0407C542232244540039879E /* ViewController.swift in Sources */,
+				04F7E2A0232A22D0006AF0CC /* FireBase.swift in Sources */,
 				04FB43482328B9CA00124F66 /* Board.swift in Sources */,
 				0407C55223225EED0039879E /* SignUpViewViewController.swift in Sources */,
 				04E40F6E2323BA1C00895248 /* TodoView.swift in Sources */,
