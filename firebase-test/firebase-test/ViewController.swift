@@ -31,12 +31,26 @@ class ViewController: UIViewController {
 
     @IBAction func OnGetStarted(_ sender: Any) {
         print("Button Pressed")
+        print("Sign up btn pressed")
+        
+        let username = usernameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().signIn(withEmail: username!, password: password!) { [weak self] user, error in
+            if error != nil {
+                print("errow login")
+                print(error.debugDescription)
+            } else {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+                let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "TaskVC") as! UINavigationController
+                self!.present(balanceViewController, animated: true, completion: nil)
+            }
+        }
        
     }
     
     @IBAction func OnSignUp(_ sender: Any) {
-        print("Sign up btn pressed")
-  
+       print("go to sign up")
     }
 
 }

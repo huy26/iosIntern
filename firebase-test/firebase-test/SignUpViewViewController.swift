@@ -57,6 +57,7 @@ class SignUpViewController: UIViewController {
                             self.showError(_message: "User data coudln't")
                         }
                     }
+                    self.transitionToHome()
                 }
             }
         }
@@ -73,10 +74,8 @@ class SignUpViewController: UIViewController {
     }
     func transitionToHome() {
         
-        //let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
-        //view.window?.rootViewController = homeViewController
-        //view.window?.makeKeyAndVisible()
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "TaskVC") as! UINavigationController
+        self.present(balanceViewController, animated: true, completion: nil)
     }
 }
