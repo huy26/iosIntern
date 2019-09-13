@@ -15,6 +15,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmpassField: UITextField!
     
+    @IBOutlet weak var getpasswordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -78,4 +79,7 @@ class SignUpViewController: UIViewController {
         let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "TaskVC") as! UINavigationController
         self.present(balanceViewController, animated: true, completion: nil)
     }
+    
+    
+  
 }

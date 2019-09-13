@@ -9,11 +9,12 @@ target 'firebase-test' do
   pod 'Firebase/Analytics'
   pod 'FirebaseUI/Auth'
   
-  pod 'FirebaseUI/Google'
-  pod 'FirebaseUI/Facebook'
+  #pod 'FirebaseUI/Google'
+  #pod 'FirebaseUI/Facebook'
+  #pod 'GoogleSignIn'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
-  pod 'GoogleSignIn'
+  
 
   # Pods for firebase-test
 

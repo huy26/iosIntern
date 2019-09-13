@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="firebase_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainView" id="BYZ-38-t0r" customClass="ViewController" customModule="firebase_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="974" y="804"/>
         </scene>
-        <!--View Controller-->
+        <!--Reset Password View-->
         <scene sceneID="jDU-hu-ivv">
             <objects>
-                <viewController id="gjt-b0-mtg" sceneMemberID="viewController">
+                <viewController id="gjt-b0-mtg" customClass="ResetPasswordView" customModule="firebase_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRA-YT-jxs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,6 +255,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5B-qa-at9">
                                 <rect key="frame" x="128" y="450" width="158" height="59"/>
                                 <state key="normal" title="Get password"/>
+                                <connections>
+                                    <action selector="onGetPassword:" destination="gjt-b0-mtg" eventType="touchUpInside" id="jZK-mw-Y4O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -269,6 +272,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="li2-9k-vzg"/>
                     </view>
+                    <connections>
+                        <outlet property="getpasswordField" destination="24g-0i-kJ3" id="xSo-Vk-oth"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hz-YK-05e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
